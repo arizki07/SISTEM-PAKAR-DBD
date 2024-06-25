@@ -292,12 +292,7 @@
                 </tbody>
             </table>
         </div>
-        <!-- <br><br>
-    <div align="left" style="position: absolute; bottom: 0; left: 0;">
-        <footer style="font-size: 10px; color: red;">
-            Sispasi-Umc | Meskipun sistem pakar ini membantu dalam proses diagnosa depresi, penting untuk diingat bahwa perhitungannya tidak dapat dijadikan sebagai acuan mutlak. Untuk mendapatkan data yang lebih pasti, disarankan untuk berkonsultasi dengan seorang psikolog.
-        </footer>
-    </div> -->
+
     </div>
 </body>
 

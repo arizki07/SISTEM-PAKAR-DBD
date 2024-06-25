@@ -210,19 +210,25 @@
         <table class="table">
             <thead>
                 <tr class="text-center">
-                    <th scope="col">#</th>
-                    <th scope="col">Nama Penyakit</th>
+                    <th scope="col">NO</th>
+                    <th scope="col">NAMA</th>
+                    <th scope="col">ALAMAT</th>
+                    <th scope="col">UMUR</th>
+                    <th scope="col">PENYAKIT</th>
                     <th scope="col">CF</th>
-                    <th scope="col">Presentase</th>
+                    <th scope="col">PRESENTASE</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($diagnoses as $key => $diagnosis)
                     <tr class="text-center">
                         <th scope="row">{{ $key + 1 }}</th>
-                        <td>{{ $diagnosis->penyakit->nama_penyakit }}</td>
-                        <td>{{ $diagnosis->cf }}</td>
-                        <td>{{ $diagnosis->presentase }}%</td>
+                        <td class="text-center">{{ $diagnosis->nama }}</td>
+                        <td class="text-center">{{ $diagnosis->alamat }}</td>
+                        <td class="text-center">{{ $diagnosis->umur }}</td>
+                        <td class="text-center">{{ $diagnosis->penyakit->nama_penyakit }}</td>
+                        <td class="text-center">{{ $diagnosis->cf }}</td>
+                        <td class="text-center">{{ $diagnosis->presentase }}%</td>
                     </tr>
                 @endforeach
             </tbody>
@@ -231,24 +237,18 @@
     </div>
     <script>
         window.onbeforeprint = function() {
-            // Sematkan kode JavaScript di sini untuk menyesuaikan tampilan sebelum mencetak
             document.getElementById('elementId').style.display =
-                'none'; // Contoh: menyembunyikan elemen sebelum mencetak
-            document.getElementById('header').style.display = 'none'; // Contoh: menyembunyikan header sebelum mencetak
+                document.getElementById('header').style.display = 'none';
         };
 
         window.onafterprint = function() {
-            // Sematkan kode JavaScript di sini untuk menyesuaikan tampilan setelah mencetak
             document.getElementById('elementId').style.display =
-                'block'; // Contoh: menampilkan kembali elemen setelah mencetak
+                'block';
             document.getElementById('header').style.display =
-                'block'; // Contoh: menampilkan kembali header setelah mencetak
+                'block';
         };
 
-        window.onload = function() {
-            // Sematkan kode JavaScript di sini untuk tindakan lain saat halaman dimuat
-            // Misalnya, inisialisasi atau pengaturan tambahan
-        };
+        window.onload = function() {};
     </script>
 
 </body>

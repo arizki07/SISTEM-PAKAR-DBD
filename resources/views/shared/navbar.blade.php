@@ -6,6 +6,8 @@
         </button>
         <div class="navbar-nav flex-row order-md-last">
             <div class="d-none d-md-flex">
+                <span style="font-size: 15px;color:rgb(0, 0, 0); margin-top: 14px;"id="timer">15:00</span>
+
                 <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode"
                     data-bs-toggle="tooltip" data-bs-placement="bottom">
                     <!-- Download SVG icon from http://tabler-icons.io/i/moon -->

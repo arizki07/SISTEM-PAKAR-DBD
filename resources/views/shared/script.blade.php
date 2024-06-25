@@ -57,4 +57,71 @@
             }
         });
     });
+
+    var timerInterval;
+
+    function getPos(e) {
+        clearInterval(timerInterval);
+    }
+
+    function startTimerWhenStopped(duration, display) {
+        clearInterval(timerInterval);
+        var timer = duration;
+        display.text(formatTime(timer));
+        timerInterval = setInterval(function() {
+            timer--;
+            if (timer < 0) {
+                clearInterval(timerInterval);
+                logout(); // Panggil fungsi logout saat waktu habis
+            } else {
+                display.text(formatTime(timer));
+            }
+        }, 1000);
+    }
+
+    function stopTimerWhenMoving() {
+        clearInterval(timerInterval);
+        var display = $('#timer');
+        display.text("15:00");
+    }
+
+    function formatTime(seconds) {
+        let hours = Math.floor(seconds / 3600);
+        let minutes = Math.floor((seconds % 3600) / 60);
+        let remainingSeconds = seconds % 60;
+
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        remainingSeconds = (remainingSeconds < 10) ? "0" + remainingSeconds : remainingSeconds;
+
+        return minutes + ":" + remainingSeconds;
+    }
+
+    // $(document).ready(function() {
+    //     var fifteenMinutes = 60 * 15;
+    //     var display = $('#timer');
+    //     startTimerWhenStopped(fifteenMinutes, display);
+    // });
+
+    function timeSession() {
+        var fiveMinutes = 60 * 15,
+            display = $('#time');
+        startTimerWhenStopped(fiveMinutes, display);
+    }
+
+    function logout() {
+        // Menggunakan AJAX untuk logout
+        $.ajax({
+            url: "{{ url('logout') }}",
+            type: 'GET', // Metode HTTP yang digunakan
+            success: function(response) {
+                // Redirect ke halaman utama atau halaman login setelah berhasil logout
+                window.location.href = '/error';
+            },
+            error: function(xhr, status, error) {
+                // Handling error jika diperlukan
+                console.error(xhr.responseText);
+            }
+        });
+    }
 </script>

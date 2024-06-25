@@ -245,7 +245,21 @@ class MulaiDiagnosaController extends Controller
             ->where('diagnosa.id_diagnosa', $pasienId)
             ->get();
 
-        $view = view('cetak/cetak_diagnosa', ['laporanDiagnosa' => $laporanDiagnosa, 'laporanGejala' => $laporanGejala]);
+        // Fetch patient details (this assumes you have a PatientModel or similar)
+        $pasien = DiagnosaModel::find($lastDiagnosa->id_diagnosa); // Adjust according to your table structure
+
+        $nama = $pasien->nama;
+        $umur = $pasien->umur;
+        $alamat = $pasien->alamat;
+
+        $view = view('cetak/cetak_diagnosa', [
+            'laporanDiagnosa' => $laporanDiagnosa,
+            'laporanGejala' => $laporanGejala,
+            'nama' => $nama,
+            'umur' => $umur,
+            'alamat' => $alamat,
+        ]);
+
         $dompdf = new Dompdf();
         $dompdf->loadHtml($view);
         $dompdf->setPaper('A4', 'landscape');

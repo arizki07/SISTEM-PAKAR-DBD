@@ -206,6 +206,27 @@
         <table>
             <thead>
                 <tr>
+                    <th colspan="2">Data Pasien</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Nama</th>
+                    <td>{{ $nama }}</td>
+                </tr>
+                <tr>
+                    <th>Umur</th>
+                    <td>{{ $umur }}</td>
+                </tr>
+                <tr>
+                    <th>Alamat</th>
+                    <td>{{ $alamat }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
                     <th colspan="9">Gejala Yang Dipilih</th>
                 </tr>
             </thead>

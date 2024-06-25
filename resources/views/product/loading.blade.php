@@ -30,9 +30,12 @@
         <div class="container container-slim py-4">
             <div class="text-center">
                 <div class="mb-3">
-                    <a href="." class="navbar-brand navbar-brand-autodark"><img src="assets/static/logo-small.svg"
-                            height="36" alt=""></a>
+                    <lottie-player src="https://lottie.host/080e410e-d727-4f13-8823-393a5620b093/eV5Y7WHYxX.json"
+                        background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay>
+                    </lottie-player>
+
                 </div>
+
                 <div class="text-secondary mb-3">Sedang proses masuk ke halaman Administrator</div>
                 <div class="progress progress-sm">
                     <div class="progress-bar progress-bar-indeterminate"></div>
@@ -44,29 +47,15 @@
     <!-- Tabler Core -->
     <script src="assets/dist/js/tabler.min.js?1692870487" defer></script>
     <script src="assets/dist/js/demo.min.js?1692870487" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
     <script>
         setTimeout(function() {
             window.location.href = "{{ route('dashboard') }}";
-        }, 3000); // Redirect after 3 seconds (adjust as needed)
+        }, 5000); // Redirect after 3 seconds (adjust as needed)
     </script>
 
 </body>
 
 </html>
-
-{{-- <div class="page page-center">
-    <div class="container container-slim py-4">
-        <div class="text-center">
-            <div class="mb-3">
-                <a href="#" class="navbar-brand navbar-brand-autodark">
-                    <img src="{{ asset('assets/static/logo-small.svg') }}" height="36" alt="">
-                </a>
-            </div>
-            <div class="text-secondary mb-3">Sedang proses masuk ke halaman Administrator</div>
-            <div class="progress progress-sm">
-                <div class="progress-bar progress-bar-indeterminate"></div>
-            </div>
-        </div>
-    </div>
-</div> --}}

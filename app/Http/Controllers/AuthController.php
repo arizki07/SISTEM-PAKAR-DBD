@@ -30,12 +30,9 @@ class AuthController extends Controller
             return redirect()->route('loading');
         } else {
             // If login fails, return error message
-            return response()->json('Username atau password salah. Silakan coba lagi.', 422);
+            return redirect()->back()->with('error', 'Username atau password salah. Silakan coba lagi');
         }
     }
-
-
-
 
     public function logout(Request $request): RedirectResponse
     {

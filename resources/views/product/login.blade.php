@@ -76,7 +76,6 @@
                                             class="btn btn-blue w-100">Login</button>
                                     </div>
                                 </form>
-
                             </div>
                             {{-- <div class="hr-text">or</div>
                             <div class="card-body">

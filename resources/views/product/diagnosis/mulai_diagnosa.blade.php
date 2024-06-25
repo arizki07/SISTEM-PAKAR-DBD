@@ -57,9 +57,12 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label for="umur" class="form-label">Umur</label>
-                                            <input type="text" name="umur" class="form-control" id="umur"
-                                                required>
+                                            <label for="umur" class="form-label">Umur (dalam Tahun)</label>
+                                            <div class="input-group">
+                                                <input type="number" name="umur" class="form-control" id="umur"
+                                                    required>
+                                                <span class="input-group-text">Tahun</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +107,7 @@
                                 <div class="d-flex justify-content-center mt-3">
                                     <button type="button" class="btn btn-secondary"
                                         onclick="history.back()">Kembali</button>
-                                    <button id="diagnoseButton" type="submit"
+                                    <button id="diagnoseButton" type="button"
                                         class="btn btn-primary ml-2">Diagnosa</button>
                                 </div>
                             </div>
@@ -118,6 +121,7 @@
 
     <link href="{{ asset('assets/extentions/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/extentions/sweetalert2/sweetalert2.min.js') }}" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
         document.getElementById('diagnoseButton').addEventListener('click', function() {
             Swal.fire({
@@ -125,15 +129,15 @@
                 title: 'Diagnosa',
                 html: `
                     <center>
-                        <lottie-player src="https://lottie.host/933bb0e2-47c0-4fa6-83f9-3330b433b883/yymyeZt49h.json"  
+                        <lottie-player src="https://lottie.host/25b09a96-7726-41f7-9ecd-b156f9050616/mmIsdUHt6O.json"  
                             background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
                         </lottie-player>
                     </center>
                     <br>
-                    <h3 class="h4">Sedang memproses data. Proses mungkin membutuhkan beberapa menit.</h3>
-                    <h3 class="h4">
+                    <h4 class="h4">Sedang memproses data. Proses mungkin membutuhkan beberapa detik.</h4>
+                    <h4 class="h4">
                         <b class="text-danger">(Jangan menutup jendela ini, bisa mengakibatkan error)</b>
-                    </h3>
+                    </h4>
                 `,
                 showConfirmButton: false,
                 showCancelButton: false,
@@ -144,7 +148,7 @@
             setTimeout(function() {
                 // Submit form
                 document.getElementById('diagnoseForm').submit();
-            }, 3000); // Penundaan simulasi dalam milidetik (di sini: 3 detik)
+            }, 15000); // Penundaan simulasi dalam milidetik (di sini: 15 detik)
         });
     </script>
 @endsection

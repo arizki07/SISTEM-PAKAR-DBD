@@ -104,7 +104,7 @@
 </script>
 
 {{-- mulai_diagnosa --}}
-<script>
+{{-- <script>
     // Tambahkan event listener untuk tombol "Diagnosa"
     document.getElementById('diagnoseButton').addEventListener('click', function() {
         Swal.fire({
@@ -134,4 +134,4 @@
         }, 3000); // Penundaan simulasi dalam milidetik (di sini: 3 detik)
         showDiagnoseAlert();
     });
-</script>
+</script> --}}

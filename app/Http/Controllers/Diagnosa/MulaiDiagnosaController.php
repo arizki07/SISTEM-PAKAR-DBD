@@ -183,7 +183,7 @@ class MulaiDiagnosaController extends Controller
         $diagnosaModel->id_penyakit = $idPenyakitTerbesar;
         $diagnosaModel->nama = $username;
         $diagnosaModel->alamat = $alamat;
-        $diagnosaModel->umur = $umur;
+        $diagnosaModel->umur = $umur . ' Tahun';
         $diagnosaModel->cf = $nilaiPenyakitTerbesar;
         $diagnosaModel->presentase = number_format($nilaiPenyakitTerbesar * 100, 2);
 

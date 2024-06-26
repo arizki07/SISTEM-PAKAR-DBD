@@ -7,7 +7,6 @@
                     <h1 class="heading mb-3">ABOUT SISTEM PAKAR.</h1>
                     <p class="mb-5">Sistem Pakar untuk Mendiagnosa Gejala Penyakit Demam Berdarah Menggunakan Metode
                         Forward Chaining Dan Certainty Faktor</p>
-                    <p class="mb-4"><a href="/mulai_diagnosa" class="btn btn-primary">Mulai Diagnosa</a></p>
 
                 </div>
                 <div class="col-lg-6">
@@ -128,4 +127,5 @@
             </div>
         </div>
     </div>
+    <hr>
 @endsection

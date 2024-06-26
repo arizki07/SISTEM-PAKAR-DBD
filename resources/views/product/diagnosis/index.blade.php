@@ -24,46 +24,16 @@
 
     <!-- MAIN -->
 
-    <div class="site-section stats">
-        <div class="container">
-            <div class="row mb-3">
-                <div class="col-lg-7 text-center mx-auto">
-                    <h2 class="section-heading">Statistics</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptate!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="data">
-                        <span class="icon text-primary">
-                            <span class="flaticon-virus"></span>
-                        </span>
-                        <strong class="d-block number">{{ $totalPenyakit }}</strong>
-                        <span class="label">Data Penyakit</span>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="data">
-                        <span class="icon text-primary">
-                            <span class="flaticon-virus"></span>
-                        </span>
-                        <strong class="d-block number">{{ $totalGejala }}</strong>
-                        <span class="label">Data Gejala</span>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="data">
-                        <span class="icon text-primary">
-                            <span class="flaticon-virus"></span>
-                        </span>
-                        <strong class="d-block number">{{ $totalRelasi }}</strong>
-                        <span class="label">Data Relasi</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <style>
+        .text-justify {
+            text-align: justify;
+        }
 
+        .text-below-image {
+            margin-top: 20px;
+            /* Adjust as needed */
+        }
+    </style>
     <div class="site-section">
         <div class="container">
             <div class="row">
@@ -71,24 +41,47 @@
                     <figure class="img-play-vid">
                         <img src="landing/images/dbd.jpg" alt="Image" class="img-fluid">
                         <div class="absolute-block d-flex">
-                            <span class="text">Watch the Video</span>
+                            <span class="text">ABOUT</span>
                         </div>
                     </figure>
+                    <div class="text-below-image">
+                        <ul class="list-check list-unstyled mb-5 text-justify">
+                            <h2 class="mb-4 section-heading text-danger">Solusi Penyakit</h2>
+
+                            <li>Pemberian cairan yang cukup sangat penting untuk menggantikan cairan yang hilang akibat
+                                demam
+                                tinggi dan keringat berlebih.</li>
+                            <li>Penggunaan obat penurun demam seperti paracetamol untuk mengurangi demam dan rasa nyeri.
+                            </li>
+                            <li>Pasien disarankan untuk banyak istirahat agar tubuh dapat pulih dengan optimal. Aktivitas
+                                fisik
+                                yang berat harus dihindari selama masa penyembuhan.</li>
+                            <li>Pada kasus yang sangat parah, seperti pada pasien dengan perdarahan hebat atau syok,
+                                transfusi
+                                darah mungkin diperlukan untuk menggantikan volume darah yang hilang dan meningkatkan jumlah
+                                trombosit.</li>
+                            <br>
+                            <p><a href="{{ url('about') }}" class="btn btn-primary">Detail About</a></p>
+
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-lg-5 ml-auto">
-                    <h2 class="mb-4 section-heading">What is Coronavirus?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex officia quas, modi sit eligendi
-                        numquam!</p>
-                    <ul class="list-check list-unstyled mb-5">
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Consectetur adipisicing elit</li>
-                        <li>Unde doloremque</li>
-                    </ul>
-                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
+                    <h2 class="mb-4 section-heading">Apa Itu Sistem Pakar Demam Berdarah?</h2>
+                    <p class="text-justify">
+                        Sistem Pakar untuk Mendiagnosa Gejala Penyakit Demam Berdarah Menggunakan Metode Forward Chaining
+                        dan
+                        Certainty Factor adalah sebuah aplikasi berbasis pengetahuan yang dirancang untuk membantu tenaga
+                        medis dalam melakukan diagnosis dini penyakit Demam Berdarah. Proyek ini bertujuan untuk
+                        meningkatkan akurasi dan kecepatan diagnosis penyakit Demam Berdarah, sehingga dapat memberikan
+                        penanganan yang lebih cepat dan tepat kepada pasien.
+                    </p>
+
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="container pb-5">
         <div class="row">

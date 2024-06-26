@@ -22,7 +22,7 @@
             font-feature-settings: "cv03", "cv04", "cv11";
         }
 
-        .navbar-brand img {
+        .navbar-brand lottie-player {
             width: 600px;
             /* Perbesar gambar */
             height: auto;
@@ -38,17 +38,17 @@
     <div class="page page-center">
         <div class="container container-slim py-2">
             <div class="text-center">
-                {{-- <div class="mb-2">
+                <div class="mb-2 navbar-brand">
                     <lottie-player src="https://lottie.host/080e410e-d727-4f13-8823-393a5620b093/eV5Y7WHYxX.json"
                         background="transparent" speed="1" style="width: 270px; height: 270px;" loop autoplay>
                     </lottie-player>
 
-                </div> --}}
-                <div class="mb-3">
+                </div>
+                {{-- <div class="mb-3">
                     <a href="." class="navbar-brand navbar-brand-autodark">
                         <img src="assets/static/me.jpg" alt="Logo">
                     </a>
-                </div>
+                </div> --}}
                 <div class="text-secondary mb-3"><b>Sedang proses masuk ke halaman Administrator</b></div>
                 <div class="progress progress-sm">
                     <div class="progress-bar progress-bar-indeterminate"></div>

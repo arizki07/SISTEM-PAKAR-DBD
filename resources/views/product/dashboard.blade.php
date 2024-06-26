@@ -176,6 +176,61 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="card card-xl border-warning shadow rounded">
+                        <div class="card-stamp card-stamp-lg">
+                            <div class="card-stamp-icon bg-warning">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div style="overflow-x: auto;">
+                                <table style="width:100%; font-family: 'Trebuchet MS', Helvetica, sans-serif;"
+                                    class="display table table-vcenter card-table table-sm table-bordered table-hover"
+                                    id="example">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th class="text-center">OPSI</th>
+                                            <th class="text-center">NAMA</th>
+                                            <th class="text-center">UMUR</th>
+                                            <th class="text-center">GEJALA</th>
+                                            <th class="text-center">RATING</th>
+                                            <th class="text-center">ALAMAT</th>
+                                            <th class="text-center">ULASAN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($ulasan as $item)
+                                            <td>
+                                                <a href="javascript:void(0)"
+                                                    data-bs-target="#modal-edit{{ $item->id }}" data-bs-toggle="modal"
+                                                    class="btn btn-outline-info btn-sm btn-icon edit-btn"><i
+                                                        class="fa-solid fa-fw fa-edit"></i>
+                                                </a>
+                                                <form id="deleteForm{{ $item->id }}"
+                                                    action="/gejala/destroy/{{ $item->id }}" method="POST"
+                                                    class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="button" class="btn btn-outline-danger btn-sm btn-icon"
+                                                        onclick="confirmDelete(event, {{ $item->id }})">
+                                                        <i class="fa-solid fa-fw fa-trash-can"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                            <td>{{ $item->nama }}</td>
+                                            <td>{{ $item->umur }}</td>
+                                            <td>{{ $item->gejala }}</td>
+                                            <td>{{ $item->rating }}</td>
+                                            <td>{{ $item->alamat }}</td>
+                                            <td>{{ $item->ulasan }}</td>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

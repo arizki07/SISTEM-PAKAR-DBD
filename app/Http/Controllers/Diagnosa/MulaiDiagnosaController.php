@@ -24,6 +24,8 @@ class MulaiDiagnosaController extends Controller
             'gejala' => $gejala,
             'diagnosa' => $diagnosa,
             'listCFUser' => $listCFUser,
+            'active' => 'Home',
+            'judul' => 'Mulai Diagnosis'
         ]);
     }
 
@@ -223,7 +225,10 @@ class MulaiDiagnosaController extends Controller
         $data['cf'] = $cf;
         $data['listPenyakit'] = $listPenyakit;
 
-        return view('product.diagnosis.hasil_diagnosis', $data);
+        return view('product.diagnosis.hasil_diagnosis', [
+            'data' => $data,
+            'judul' => 'Hasil Diagnosis'
+        ]);
     }
 
     public function downloadPDF(Request $request)

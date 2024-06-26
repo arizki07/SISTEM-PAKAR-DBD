@@ -19,7 +19,8 @@ class LandingController extends Controller
             'totalGejala' => $totalGejala,
             'totalPenyakit' => $totalPenyakit,
             'totalRelasi' => $totalRelasi,
-            'active' => 'Home'
+            'active' => 'Home',
+            'judul' => 'Home'
         ]);
     }
 
@@ -27,6 +28,7 @@ class LandingController extends Controller
     {
         return view('product.diagnosis.about', [
             'active' => 'About',
+            'judul' => 'About'
         ]);
     }
 

@@ -1,12 +1,13 @@
 @extends('layouts.landing.main')
 @section('content')
+    @include('components.alert')
     <div class="hero-v1">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mr-auto text-center text-lg-left">
                     <h1 class="heading mb-3">SISTEM PAKAR.</h1>
                     <p class="mb-5">Sistem Pakar untuk Mendiagnosa Gejala Penyakit Demam Berdarah Menggunakan Metode
-                        Forward Chaining Dan Certainty Faktor</p>
+                        Forward Chaining Dan Certainty Faktor</p>
                     <p class="mb-4"><a href="/mulai_diagnosa" class="btn btn-primary">Mulai Diagnosa</a></p>
 
                 </div>
@@ -23,7 +24,7 @@
 
     <!-- MAIN -->
 
-    {{-- <div class="site-section stats">
+    <div class="site-section stats">
         <div class="container">
             <div class="row mb-3">
                 <div class="col-lg-7 text-center mx-auto">
@@ -61,22 +62,16 @@
                 </div>
             </div>
         </div>
-    </div> --}}
-
-
-
+    </div>
 
     <div class="site-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <figure class="img-play-vid">
-                        <img src="landing/images/hero_1.jpg" alt="Image" class="img-fluid">
+                        <img src="landing/images/dbd.jpg" alt="Image" class="img-fluid">
                         <div class="absolute-block d-flex">
                             <span class="text">Watch the Video</span>
-                            <a href="https://www.youtube.com/watch?v=9pVy8sRC440" data-fancybox class="btn-play">
-                                <span class="icon-play"></span>
-                            </a>
                         </div>
                     </figure>
                 </div>
@@ -104,7 +99,6 @@
                     </div>
                     <div>
                         <h3>Protection</h3>
-                        <span class="d-block">Lorem ipsum dolor sit.</span>
                     </div>
                 </div>
             </div>
@@ -115,7 +109,6 @@
                     </div>
                     <div>
                         <h3>Prevention</h3>
-                        <span class="d-block">Lorem ipsum dolor sit.</span>
                     </div>
                 </div>
             </div>
@@ -126,7 +119,6 @@
                     </div>
                     <div>
                         <h3>Treatments</h3>
-                        <span class="d-block">Lorem ipsum dolor sit.</span>
                     </div>
                 </div>
             </div>
@@ -137,7 +129,6 @@
                     </div>
                     <div>
                         <h3>Symptoms</h3>
-                        <span class="d-block">Lorem ipsum dolor sit.</span>
                     </div>
                 </div>
             </div>
@@ -145,7 +136,7 @@
     </div>
 
 
-    <div class="site-section bg-primary-light">
+    {{-- <div class="site-section bg-primary-light">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -213,82 +204,109 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="site-section bg-primary-light">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-7 mx-auto text-center">
-                    <h2 class="mb-4 section-heading">Symptoms of Coronavirus</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex officia quas, modi sit eligendi
-                        numquam!</p>
+                    <h2 class="mb-4 section-heading">Ulasan Aplikasi Sistem Pakar untuk Mendiagnosa Gejala Penyakit Demam
+                        Berdarah Menggunakan Metode
+                        Forward Chaining Dan Certainty Faktor</h2>
+                    <p>Silahkan isi ulasan terkait aplikasi Sistem Pakar kami!
+                    </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="symptom d-flex">
-                        <div class="img">
-                            <img src="landing/images/symptom_high-fever.png" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="text">
-                            <h3>High Fever</h3>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ipsum repellendus
-                                animi modi iure provident, cupiditate perferendis voluptatem!</p>
-                        </div>
-                    </div>
+                <div class="col-lg-4 mb-4">
+                    <img src="landing/images/db.jpg" style="height: 670px" class="img-fluid" alt="Gambar Aplikasi">
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="symptom d-flex">
-                        <div class="img">
-                            <img src="landing/images/symptom_cough.png" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="text">
-                            <h3>Cough</h3>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ullam illo laborum
-                                repellendus vel esse dolor, sunt exercitationem.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="symptom d-flex">
-                        <div class="img">
-                            <img src="landing/images/symptom_sore-troath.png" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="text">
-                            <h3>Sore Troath</h3>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum esse voluptatum, vel
-                                inventore at! Ullam, libero reiciendis amet?</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-lg-8 mb-4">
+                    <div class="symptom card">
+                        <div class="card-body">
+                            <form action="{{ route('post.ulasan') }}" method="post" id="formUlasan">
+                                @csrf
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="nama">Nama</label>
+                                        <input type="text" class="form-control" name="nama" id="nama"
+                                            placeholder="Masukkan nama Anda">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="umur">Umur</label>
+                                        <div class="input-group">
+                                            <input type="number" name="umur" class="form-control" id="umur"
+                                                required>
+                                            <span class="input-group-text">Tahun</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="rating">Rating</label>
+                                        <select class="form-control" name="rating" id="rating">
+                                            <option selected disabled>--Pilih Rating--</option>
+                                            <option value="Sangat Buruk">1 - Sangat Buruk</option>
+                                            <option value="Buruk">2 - Buruk</option>
+                                            <option value="Cukup">3 - Cukup</option>
+                                            <option value="Baik">4 - Baik</option>
+                                            <option value="Sangat Baik">5 - Sangat Baik</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="gejala">Gejala yang di alami</label>
+                                        <input type="text" class="form-control" name="gejala" id="gejala"
+                                            placeholder="Masukkan gejala Anda">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="alamat">Alamat</label>
+                                    <textarea class="form-control" name="alamat" id="alamat" rows="5" placeholder="Masukkan alamat Anda"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ulasan">Ulasan</label>
+                                    <textarea class="form-control" name="ulasan" id="ulasan" rows="5"
+                                        placeholder="Masukkan ulasan atau komentar Anda"></textarea>
+                                </div>
 
-                <div class="col-lg-6 mb-4">
-                    <div class="symptom d-flex">
-                        <div class="img">
-                            <img src="landing/images/symptom_headache.png" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="text">
-                            <h3>Headache</h3>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem voluptatem
-                                ratione veniam rerum qui quibusdam reprehenderit quis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-md-center">
-                <div class="col-lg-10">
-                    <div class="note row">
-
-                        <div class="col-lg-8 mb-4 mb-lg-0"><strong>Stay at home and call your doctor:</strong>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, eaque.</div>
-                        <div class="col-lg-4 text-lg-right">
-                            <a href="#" class="btn btn-primary"><span class="icon-phone mr-2 mt-3"></span>Help
-                                line</a>
+                                <button type="button" id="btnUlasan" class="btn btn-primary">Kirim Ulasan</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <link href="{{ asset('assets/extentions/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('assets/extentions/sweetalert2/sweetalert2.min.js') }}" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        document.getElementById('btnUlasan').addEventListener('click', function() {
+            Swal.fire({
+                // icon: 'info',
+                // title: 'Diagnosa',
+                html: `
+                    <center>
+                        <lottie-player src="https://lottie.host/25b09a96-7726-41f7-9ecd-b156f9050616/mmIsdUHt6O.json"  
+                            background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
+                        </lottie-player>
+                    </center>
+                    <br>
+                    <h4 class="h4">Sedang memproses data. Proses mungkin membutuhkan beberapa detik.</h4>
+                    <h4 class="h4">
+                        <b class="text-danger">(Jangan menutup jendela ini, bisa mengakibatkan error)</b>
+                    </h4>
+                `,
+                showConfirmButton: false,
+                showCancelButton: false,
+                allowOutsideClick: false
+            });
+
+            setTimeout(function() {
+                document.getElementById('formUlasan').submit();
+            }, 15000);
+        })
+    </script>
 @endsection

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\RelasiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Diagnosa\MulaiDiagnosaController;
+use App\Http\Controllers\LandingController;
 use App\Models\GejalaModel;
 use Illuminate\Support\Facades\Route;
 
@@ -21,8 +22,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('product.diagnosis.index');
+// Route::get('/', function () {
+//     return view('product.diagnosis.index');
+// });
+
+Route::controller(LandingController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::get('/about', 'about');
+    Route::post('/ulasan', 'ulasan')->name('post.ulasan');
 });
 
 Route::controller(MulaiDiagnosaController::class)->group(function () {

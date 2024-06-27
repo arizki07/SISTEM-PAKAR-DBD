@@ -106,7 +106,7 @@
                 <div class="col-lg-4">
                     <div class="team text-center">
                         <img src="assets/static/me.jpg" alt="Image" class="img-fluid">
-                        <h3>Cynthia Anderson</h3>
+                        <h3>ILMI SUDI NUGRAHA</h3>
                         <p>
                             <i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country<br>
                             <i class="fas fa-university"></i> Universitas Muhammadiyah Cirebon

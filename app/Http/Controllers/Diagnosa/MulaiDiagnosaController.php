@@ -225,10 +225,10 @@ class MulaiDiagnosaController extends Controller
         $data['cf'] = $cf;
         $data['listPenyakit'] = $listPenyakit;
 
-        return view('product.diagnosis.hasil_diagnosis', [
-            'data' => $data,
-            'judul' => 'Hasil Diagnosis'
-        ]);
+        return view(
+            'product.diagnosis.hasil_diagnosis',
+            $data
+        );
     }
 
     public function downloadPDF(Request $request)

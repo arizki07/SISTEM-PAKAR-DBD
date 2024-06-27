@@ -224,7 +224,7 @@ class MulaiDiagnosaController extends Controller
         $data['penyakitCodes'] = $penyakitCodes;
         $data['cf'] = $cf;
         $data['listPenyakit'] = $listPenyakit;
-
+        // dd($listPenyakit);
         return view(
             'product.diagnosis.hasil_diagnosis',
             $data

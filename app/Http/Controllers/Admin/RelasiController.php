@@ -36,8 +36,8 @@ class RelasiController extends Controller
         $request->validate([
             'id_gejala' => 'required',
             'id_penyakit' => 'required',
-            'mb' => 'required',
-            'md' => 'required',
+            // 'mb' => 'required',
+            // 'md' => 'required',
             'cf' => 'required',
         ]);
 

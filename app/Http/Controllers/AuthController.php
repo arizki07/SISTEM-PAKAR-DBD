@@ -10,7 +10,9 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view('product.login');
+        return view('product.login', [
+            'judul' => 'Halaman Login'
+        ]);
     }
 
     public function authenticate(Request $request)

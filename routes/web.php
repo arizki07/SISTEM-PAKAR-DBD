@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Route;
 Route::controller(LandingController::class)->group(function () {
     Route::get('/', 'index');
     Route::get('/about', 'about');
+    Route::get('/contact', 'contact');
     Route::post('/ulasan', 'ulasan')->name('post.ulasan');
 });
 

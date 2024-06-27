@@ -32,6 +32,11 @@ class LandingController extends Controller
         ]);
     }
 
+    public function contact()
+    {
+        return view('product.diagnosis.contact');
+    }
+
     public function ulasan(Request $request)
     {
         $request->validate([

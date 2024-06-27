@@ -176,12 +176,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-8">
                     <div class="card card-xl border-warning shadow rounded">
                         <div class="card-stamp card-stamp-lg">
                             <div class="card-stamp-icon bg-warning">
                                 <i class="fa-solid fa-users"></i>
                             </div>
+                        </div>
+                        <div class="card-header">
+                            <p>Data Ulasan</p>
                         </div>
                         <div class="card-body">
                             <div style="overflow-x: auto;">
@@ -193,8 +196,6 @@
                                             <th class="text-center">OPSI</th>
                                             <th class="text-center">NAMA</th>
                                             <th class="text-center">UMUR</th>
-                                            <th class="text-center">GEJALA</th>
-                                            <th class="text-center">RATING</th>
                                             <th class="text-center">ALAMAT</th>
                                             <th class="text-center">ULASAN</th>
                                         </tr>
@@ -220,8 +221,6 @@
                                             </td>
                                             <td>{{ $item->nama }}</td>
                                             <td>{{ $item->umur }}</td>
-                                            <td>{{ $item->gejala }}</td>
-                                            <td>{{ $item->rating }}</td>
                                             <td>{{ $item->alamat }}</td>
                                             <td>{{ $item->ulasan }}</td>
                                         @endforeach
@@ -230,6 +229,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a href="https://github.com/arizki07" class="card card-sponsor" target="_blank" rel="noopener"
+                        style="background-image: url(assets/static/sponsor-banner-homepage.svg)"
+                        aria-label="Sponsor Tabler!">
+                        <div class="card-body"></div>
+                    </a>
                 </div>
             </div>
         </div>

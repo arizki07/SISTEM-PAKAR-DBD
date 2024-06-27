@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id('id_relasi');
             $table->unsignedBigInteger('id_penyakit');
             $table->unsignedBigInteger('id_gejala');
-            $table->float('mb');
-            $table->float('md');
+            $table->float('mb')->nullable();
+            $table->float('md')->nullable();
             $table->float('cf');
             $table->timestamps();
 

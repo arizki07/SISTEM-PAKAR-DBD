@@ -30,14 +30,22 @@
 
                 <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
-
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="/" class="nav-link">Home</a></li>
-                            <li><a href="{{ url('about') }}" class="nav-link">About</a></li>
-                            <li><a href="contact.html" class="nav-link">Contact</a></li>
-                            <li><a href="{{ url('login') }}" class="nav-link">Login</a></li>
+                            <li class="{{ Request::path() == '/' ? 'active' : '' }}">
+                                <a href="/" class="nav-link">Home</a>
+                            </li>
+                            <li class="{{ Request::path() == 'about' ? 'active' : '' }}">
+                                <a href="{{ url('about') }}" class="nav-link">About</a>
+                            </li>
+                            <li class="{{ Request::path() == 'contact' ? 'active' : '' }}">
+                                <a href="{{ url('contact') }}" class="nav-link">Contact</a>
+                            </li>
+                            <li class="{{ Request::path() == 'login' ? 'active' : '' }}">
+                                <a href="{{ url('login') }}" class="nav-link">Login</a>
+                            </li>
                         </ul>
                     </nav>
+
                 </div>
 
 

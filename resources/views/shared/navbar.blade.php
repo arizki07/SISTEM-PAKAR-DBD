@@ -165,11 +165,11 @@
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <a href="#" class="dropdown-item">Status</a>
-                    <a href="./profile.html" class="dropdown-item">Profile</a>
-                    <a href="#" class="dropdown-item">Feedback</a>
+                    <a href="{{ url('gejala') }}" class="dropdown-item">Data Gejala</a>
+                    <a href="{{ url('penyakit') }}" class="dropdown-item">Data Penyakit</a>
+                    <a href="{{ url('relasi') }}" class="dropdown-item">Data Relasi</a>
+                    <a href="{{ url('diagnosa') }}" class="dropdown-item">Data Diagnosa</a>
                     <div class="dropdown-divider"></div>
-                    <a href="./settings.html" class="dropdown-item">Settings</a>
                     <a href="{{ url('logout') }}" class="dropdown-item">Logout</a>
                 </div>
             </div>

@@ -248,8 +248,12 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="gejala">Gejala yang di alami</label>
-                                        <input type="text" class="form-control" name="gejala" id="gejala"
-                                            placeholder="Masukkan gejala Anda">
+                                        <select class="form-control" name="gejala">
+                                            <option selected disabled>--Pilih Gejala--</option>
+                                            @foreach ($gejalas as $item)
+                                                <option value="{{ $item->id }}">{{ $item->nama_gejala }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">

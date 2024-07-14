@@ -12,6 +12,7 @@ class LandingController extends Controller
 {
     public function index()
     {
+        $gejalas = GejalaModel::all();
         $totalPenyakit = PenyakitModel::count();
         $totalGejala = GejalaModel::count();
         $totalRelasi = RelasiModel::count();
@@ -20,7 +21,8 @@ class LandingController extends Controller
             'totalPenyakit' => $totalPenyakit,
             'totalRelasi' => $totalRelasi,
             'active' => 'Home',
-            'judul' => 'Home'
+            'judul' => 'Home',
+            'gejalas' => $gejalas
         ]);
     }
 

@@ -94,7 +94,8 @@
                                                     <select class="form-control" name="cf[]" required>
                                                         <option selected disabled>--Pilih Nilai--</option>
                                                         <?php foreach ($listCFUser as $cfItem) : ?>
-                                                        <option value="<?= $cfItem['id'] ?>"><?= $cfItem['nama_nilai'] ?>
+                                                        <option value="<?= $cfItem['id'] ?>">
+                                                            <?= $cfItem['nama_nilai'] ?>-<?= $cfItem['cf'] ?>
                                                         </option>
                                                         <?php endforeach; ?>
                                                     </select>
